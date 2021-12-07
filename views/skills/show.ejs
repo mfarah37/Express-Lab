@@ -9,5 +9,9 @@
 <body>
     <h3><%= skills.skills %></h3>
 	<h3>Complete: <%= skills.done ? 'Yes' : 'No' %></h3>
+    <a href="/skills/<%=skills.id%>/edit">Edit Skill</a>
+    <form action="/skills/<%= skills.id %>?_method=DELETE" method="POST" autocomplete="off">
+        <button type="submit">Delete Skill</button>
+    </form>
 </body>
 </html>
